@@ -17,31 +17,31 @@ headers = rows[0]
 star_data = rows[1:]
 
 df = pd.read_csv("stars.csv")
-solar_mass_list = df["solar_mass"].tolist()
-solar_radius_list = df["solar_radius"].tolist()
+mass = df["mass"].tolist()
+radius= df["radius"].tolist()
 
-solar_mass_list.pop(0)
-solar_radius_list.pop(0)
+mass.pop(0)
+radius.pop(0)
 
-star_solar_mass_si_unit = []
+mass_si_unit = []
 
-for data in solar_mass_list:
+for data in mass:
 
     si_unit = float(data)*1.989e+30
-    star_solar_mass_si_unit.append(si_unit)
+    mass_si_unit.append(si_unit)
 
-print(star_solar_mass_si_unit)
+print(_mass_si_unit)
 
-star_solar_radius_si_unit = []
+radius_si_unit = []
 
-for data in solar_radius_list:
+for data in radius:
     si_unit = float(data)* 6.957e+8
-    star_solar_radius_si_unit.append(si_unit)
+    radius_si_unit.append(si_unit)
 
-print(star_solar_radius_si_unit)
+print(radius_si_unit)
 
-star_masses = star_solar_mass_si_unit
-star_radiuses = star_solar_radius_si_unit
+star_masses = mass_si_unit
+star_radiuses = radius_si_unit
 star_names = df["star_names"].tolist()
 star_names.pop(0)
 
